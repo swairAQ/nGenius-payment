@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@network-international/react-native-ngenius": "^1.0.8",
+    "@react-native-community/async-storage": "^1.12.1",
     "react": "16.13.1",
     "react-native": "0.63.4"
   },
