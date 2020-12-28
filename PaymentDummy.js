@@ -55,12 +55,11 @@ export default function PaymentMethod() {
         AsyncStorage.getItem('Resources').then(info => {
             logs.push("Deducting " + deductionAmount + "AED from total ...")
             setlogs(logs)
+
             const c = info ? JSON.parse(info) : [];
 
             const AuthPaymentUrl = orderUrl + "/" + c.orderId + "/payments/" + c.paymentId + "/captures"
-            console.log(accessToken + " ==== >access token")
 
-            console.log(AuthPaymentUrl + " ==== >payment url")
             fetch(AuthPaymentUrl,
                 {
                     method: 'POST',
